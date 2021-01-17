@@ -16,10 +16,7 @@ public class ReporteTest {
     public void setUp() {
         rep = new Reporte();
     }
-    @Test
-    public void given_empty_connection_returnNull(){
-        assertNull(rep.getCon());
-    }
+
 
     @Test
     public void given_conection_returnConnection(){

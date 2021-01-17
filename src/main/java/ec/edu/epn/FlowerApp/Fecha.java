@@ -15,8 +15,8 @@ public class Fecha {
 	}
 	@Override
 	public String toString() {
-		return "dia: " + this . dia + " mes:" + this . mes + " año:" + this . año ;
+
+		return dia+"/"+mes+"/"+año ;
+
 	}
-	
-	
 }

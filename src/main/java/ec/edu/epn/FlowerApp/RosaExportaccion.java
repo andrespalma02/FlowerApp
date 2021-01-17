@@ -13,17 +13,16 @@ public class RosaExportaccion extends Rosa{
 		super(variedad,longitud,fechaCosecha, produccion);
 		
 	}
-	
-	
+
 	@Override
 	public double calcularProduccion() {
-		
+
 		return super.getProduccion()*this.PRECIO;
 	}
 
 	@Override
 	public String toString() {
-		return super.toString() + " Produccion exportacion total : ["+ super.getProduccion() + "  CostoProduccion "+ calcularProduccion()+ "]";
+		return super.toString() + ","+ this.calcularProduccion()+",Produccion" ;
 	}
 	
 	

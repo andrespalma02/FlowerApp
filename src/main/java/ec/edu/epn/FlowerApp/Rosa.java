@@ -28,6 +28,10 @@ public  abstract class Rosa {
 
 	@Override
 	public String toString() {
-		return "Rosa [Variedad =" + variedad + ", Longitud=" + longitud + ", fechaCosecha=" + fechaCosecha + "]";
+		String variedad=this.variedad;
+		String longitud=String.valueOf(this.longitud);
+		String fecha = this.fechaCosecha.toString();
+		String produccion=String.valueOf(this.produccion);
+		return variedad+","+longitud+","+fecha+","+produccion;
 	}
 }

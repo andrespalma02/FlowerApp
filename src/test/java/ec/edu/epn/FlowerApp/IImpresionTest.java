@@ -1,8 +1,6 @@
 package ec.edu.epn.FlowerApp;
 
-import ec.edu.epn.tdd.flowerapp.FormularioReporte;
-import ec.edu.epn.tdd.flowerapp.IExternal;
-import ec.edu.epn.tdd.flowerapp.IImpresion;
+
 import org.junit.Test;
 import org.mockito.Mockito;
 

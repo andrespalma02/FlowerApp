@@ -10,25 +10,17 @@ import java.util.ArrayList;
 public class Cama {
 	
 	private ArrayList<Rosa>Lista;
-	
+	private Conexion con;
 	
 	public Cama() {
 		super();
-		Lista = new ArrayList<Rosa>();
+		con=new Conexion();
+		Lista=new ArrayList<>();
 	}
 	
 	
 	public void registrarRosa(Rosa rosa) {
 		Lista.add(rosa);
 		
-	}
-
-
-	@Override
-	public String toString() {
-		String salida="Produccion Agregada";  
-		for(Rosa rosa: Lista)
-			salida+="\n"+ rosa; 
-		return salida;
 	}
 }

@@ -25,7 +25,7 @@ public class RosaRechazo extends Rosa {
 	
 	@Override
 	public String toString() {
-		return super.toString()+ "Rosas Rechazadas [Produccion Total =" + super.getProduccion() + ", Estado Rechazo=" + estado + "CostoProduccion"+calcularProduccion()+ "]";
+		return super.toString() + ","+ this.calcularProduccion()+",Rechazo" ;
 	}
 	
 }
