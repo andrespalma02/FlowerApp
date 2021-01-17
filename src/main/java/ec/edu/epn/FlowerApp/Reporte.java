@@ -8,7 +8,11 @@ public class Reporte {
     private String fecha;
     private Conexion con;
     private String cuerpoReporte= "";
+    private IAnalitica analisis;
 
+    public void setAnalisis(IAnalitica analisis) {
+        this.analisis = analisis;
+    }
 
     public int validarTipo(String tipo) {
         String[] valid = {"Produccion", "Rechazo", "Todos"};
@@ -30,19 +34,24 @@ public class Reporte {
         con = new Conexion();
     }
 
-    public void generarReporte(String tipo) throws IOException {
+    public boolean generarReporte(String tipo) throws IOException {
         if (validarTipo(tipo) == 0) {
             ArrayList<String> resultado = con.leerDatos(tipo);
             for (int i = 0; i < resultado.size(); i++) {
                 cuerpoReporte +=resultado.get(i) + "\n";
             }
         } else {
-            cuerpoReporte = "Error en el tipo";
+            cuerpoReporte = "";
         }
+        if (cuerpoReporte!=""){
+            imprimirProduccion(cuerpoReporte);
+            return true;
+        }
+        else return false;
 
-        imprimirProduccion(cuerpoReporte);
 
     }
+
 
     public void imprimirProduccion(String reporte) {
         System.out.println(this.getReporte());
@@ -53,6 +62,20 @@ public class Reporte {
         return "Reporte #1" +
                 "\n" + "10/01/2020" +
                 "\n" + this.cuerpoReporte;
+    }
+
+    public String analizarReporte(String tipo){
+        String[] valid = {"Calidad", "Tendencias", "Ingresos"};
+        if(!Arrays.stream(valid).anyMatch(tipo::equals)){
+            return "Tipo de analisis no valido";
+        }
+        else {
+            System.out.println("Analisis de " + tipo + ": ");
+            System.out.println("Iniciando Analisis...");
+            System.out.println("Analizando reporte...");
+            System.out.println("Analisis terminado!");
+            return analisis.analizarDatos(this, tipo);
+        }
     }
 
 

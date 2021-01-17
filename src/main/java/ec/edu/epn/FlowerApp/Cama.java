@@ -10,14 +10,18 @@ import java.util.ArrayList;
 public class Cama {
 	private ArrayList<Rosa>Lista;
 	private Conexion con;
-	
+
+
 	public Cama() {
 		super();
 		con=new Conexion();
 		Lista=new ArrayList<>();
 	}
 
+
+
 	public boolean registrarRosa(Rosa rosa) {
+
 		if (rosa==null) {
 			return false;
 		}

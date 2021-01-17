@@ -5,13 +5,9 @@ import java.io.IOException;
 
 public class Test {
 	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
-		//ingreso de datos
-		Cama cama = new Cama();
-		RosaExportaccion exportacion = new RosaExportaccion("Naomi", 20, new Fecha("10/10/2020"), 10.0);
-		cama.registrarRosa(exportacion);
-		RosaRechazo rechazo = new RosaRechazo("Naomi", 20, new Fecha("10/10/2020"), 10.0, "Petalo Rechazado");
-		cama.registrarRosa(rechazo);
+	    FormularioRegistro formReg=new FormularioRegistro();
+		formReg.ingresarDatos("Naomi","20","20/10/2020","10","");
+		formReg.ingresarDatos("Naomi","20","20/10/2020","10","Petalo Rechazado");
 		//leer datos
 		Reporte rep = new Reporte();
 		rep.generarReporte("Todos");
