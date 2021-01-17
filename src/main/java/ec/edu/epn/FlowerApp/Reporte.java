@@ -70,7 +70,7 @@ public class Reporte {
     }
 
     public String analizarReporte(String tipo) {
-        if (validarTipoAnalisis(tipo)) {
+        if (!validarTipoAnalisis(tipo)) {
             return "Tipo de analisis no valido";
         } else {
             System.out.println("Analisis de " + tipo + ": ");

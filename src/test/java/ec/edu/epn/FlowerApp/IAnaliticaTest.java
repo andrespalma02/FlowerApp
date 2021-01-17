@@ -15,7 +15,7 @@ public class IAnaliticaTest {
         Mockito.when(analitica.analizarDatos(Mockito.any(),Mockito.any()))
                 .thenReturn("Ingresos aumentando!");
 
-        assertEquals(reporte.analizarReporte("Ingresos"),"Ingresos aumentando!");
+        assertEquals("Ingresos aumentando!",reporte.analizarReporte("Ingresos"));
     }
 
 }

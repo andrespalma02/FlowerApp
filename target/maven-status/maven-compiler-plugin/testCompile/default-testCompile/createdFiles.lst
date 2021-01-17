@@ -1,4 +1,10 @@
-ec\edu\epn\FlowerApp\IExternalTest.class
+ec\edu\epn\FlowerApp\RosaTestParam.class
+ec\edu\epn\FlowerApp\RosaRechazoTest.class
 ec\edu\epn\FlowerApp\ReporteTest.class
-ec\edu\epn\FlowerApp\ReporteTestParam.class
 ec\edu\epn\FlowerApp\IImpresionTest.class
+ec\edu\epn\FlowerApp\IExternalTest.class
+ec\edu\epn\FlowerApp\FechaTestParam.class
+ec\edu\epn\FlowerApp\RosaExportaccionTest.class
+ec\edu\epn\FlowerApp\CamaTest.class
+ec\edu\epn\FlowerApp\IAnaliticaTest.class
+ec\edu\epn\FlowerApp\ReporteTestParam.class
