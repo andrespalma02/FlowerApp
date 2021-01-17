@@ -64,9 +64,18 @@ public class Reporte {
                 "\n" + this.cuerpoReporte;
     }
 
-    public String analizarReporte(String tipo){
+    public boolean validarTipoAnalisis(String tipo){
         String[] valid = {"Calidad", "Tendencias", "Ingresos"};
-        if(!Arrays.stream(valid).anyMatch(tipo::equals)){
+        if(Arrays.stream(valid).anyMatch(tipo::equals)){
+           return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public String analizarReporte(String tipo){
+        if (validarTipoAnalisis(tipo)) {
             return "Tipo de analisis no valido";
         }
         else {

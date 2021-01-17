@@ -19,7 +19,7 @@ public class Fecha {
 	@Override
 	public String toString() {
 
-		return String.format("%02d", dia)+"/"+String.format("%02d", mes)+"/"+String.valueOf(año) ;
+		return String.format("%02d", dia)+"/"+String.format("%02d", mes)+"/"+String.format("%04d", año) ;
 
 	}
 }

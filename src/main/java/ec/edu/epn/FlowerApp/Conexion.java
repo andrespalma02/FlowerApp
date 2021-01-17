@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Conexion {
 
-	ArrayList<String> resultado ;
+	private ArrayList<String> resultado ;
 
 
 	public Conexion() {
@@ -18,19 +18,8 @@ public class Conexion {
 	}
 
 	public boolean comprobarArchivo(File archivo) {
-		boolean flag=false;
-		try {
-			if (archivo.exists()) {
-				flag= true;
-			}
-
-		} catch (Exception e) {
-
-			flag= false;
-		}
-		return flag;
+		return archivo.exists();
 	}
-
 	public ArrayList<String> getResultado(){
 		return this.resultado;
 	}
@@ -61,8 +50,13 @@ public class Conexion {
 		return BaseDatos.datos;
 	}
 	public boolean registrarDatos(String consulta){
-		BaseDatos.datos.add(consulta);
-		return true;
+		if (!consulta.equals("")) {
+			BaseDatos.datos.add(consulta);
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 
 }
