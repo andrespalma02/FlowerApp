@@ -66,12 +66,8 @@ public class Reporte {
 
     public boolean validarTipoAnalisis(String tipo){
         String[] valid = {"Calidad", "Tendencias", "Ingresos"};
-        if(Arrays.stream(valid).anyMatch(tipo::equals)){
-           return true;
-        }
-        else{
-            return false;
-        }
+        return Arrays.stream(valid).anyMatch(tipo::equals);
+
     }
 
     public String analizarReporte(String tipo){
