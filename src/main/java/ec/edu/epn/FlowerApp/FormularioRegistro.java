@@ -2,9 +2,6 @@ package ec.edu.epn.FlowerApp;
 
 public class FormularioRegistro {
 
-
-
-
     public boolean ingresarDatos(String variedad, String longitud, String fecha, String produccion, String estado)
     {
         Rosa rosa;
