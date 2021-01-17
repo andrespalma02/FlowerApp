@@ -7,8 +7,12 @@ import java.util.Arrays;
 public class Reporte {
     private String fecha;
     private Conexion con;
-    private String cuerpoReporte= "";
+    private String cuerpoReporte = "";
     private IAnalitica analisis;
+
+    public Reporte() {
+        con = new Conexion();
+    }
 
     public void setAnalisis(IAnalitica analisis) {
         this.analisis = analisis;
@@ -16,7 +20,7 @@ public class Reporte {
 
     public int validarTipo(String tipo) {
         String[] valid = {"Produccion", "Rechazo", "Todos"};
-        if(Arrays.stream(valid).anyMatch(tipo::equals)){
+        if (Arrays.stream(valid).anyMatch(tipo::equals)) {
             return 0;
         }
         return -1;
@@ -30,24 +34,19 @@ public class Reporte {
         this.con = con;
     }
 
-    public Reporte() {
-        con = new Conexion();
-    }
-
     public boolean generarReporte(String tipo) throws IOException {
         if (validarTipo(tipo) == 0) {
             ArrayList<String> resultado = con.leerDatos(tipo);
             for (int i = 0; i < resultado.size(); i++) {
-                cuerpoReporte +=resultado.get(i) + "\n";
+                cuerpoReporte += resultado.get(i) + "\n";
             }
         } else {
             cuerpoReporte = "";
         }
-        if (cuerpoReporte!=""){
+        if (cuerpoReporte != "") {
             imprimirProduccion(cuerpoReporte);
             return true;
-        }
-        else return false;
+        } else return false;
 
 
     }
@@ -64,17 +63,16 @@ public class Reporte {
                 "\n" + this.cuerpoReporte;
     }
 
-    public boolean validarTipoAnalisis(String tipo){
+    public boolean validarTipoAnalisis(String tipo) {
         String[] valid = {"Calidad", "Tendencias", "Ingresos"};
         return Arrays.stream(valid).anyMatch(tipo::equals);
 
     }
 
-    public String analizarReporte(String tipo){
+    public String analizarReporte(String tipo) {
         if (validarTipoAnalisis(tipo)) {
             return "Tipo de analisis no valido";
-        }
-        else {
+        } else {
             System.out.println("Analisis de " + tipo + ": ");
             System.out.println("Iniciando Analisis...");
             System.out.println("Analizando reporte...");

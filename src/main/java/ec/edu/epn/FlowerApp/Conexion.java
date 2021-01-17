@@ -26,7 +26,6 @@ public class Conexion {
 /*
 	public ArrayList<String> leerDatos(String tipo) throws IOException {
 		String basePath = new File("").getAbsolutePath();
-		String path = new File("src/main/java/ec/edu/epn/FlowerApp/Archivo.txt")
 				.getAbsolutePath();
 		File archivo=new File(path);
 		System.out.println(this.comprobarArchivo(archivo));
