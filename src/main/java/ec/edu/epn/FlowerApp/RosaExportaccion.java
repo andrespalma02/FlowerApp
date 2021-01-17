@@ -24,6 +24,4 @@ public class RosaExportaccion extends Rosa{
 	public String toString() {
 		return super.toString() + ","+ this.calcularProduccion()+",Produccion" ;
 	}
-	
-	
 }

@@ -8,7 +8,6 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 public class Cama {
-	
 	private ArrayList<Rosa>Lista;
 	private Conexion con;
 	
@@ -17,10 +16,14 @@ public class Cama {
 		con=new Conexion();
 		Lista=new ArrayList<>();
 	}
-	
-	
-	public void registrarRosa(Rosa rosa) {
-		Lista.add(rosa);
-		
+
+	public boolean registrarRosa(Rosa rosa) {
+		if (rosa==null) {
+			return false;
+		}
+		else {
+			con.registrarDatos(rosa.toString());
+			return true;
+		}
 	}
 }
