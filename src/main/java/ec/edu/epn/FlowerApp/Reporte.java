@@ -60,6 +60,8 @@ public class Reporte {
     public String getReporte() {
         return "Reporte #1" +
                 "\n" + "10/01/2020" +
+                "\nVariedad\tLongitud\tFecha\t\tCantidad\tTotal Produccion" +
+
                 "\n" + this.cuerpoReporte;
     }
 

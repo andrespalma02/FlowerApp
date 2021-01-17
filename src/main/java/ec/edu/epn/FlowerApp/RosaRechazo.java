@@ -24,7 +24,7 @@ public class RosaRechazo extends Rosa {
 
     @Override
     public String toString() {
-        return super.toString() + "," + this.calcularProduccion() + ",Rechazo";
+        return super.toString() + "\t\t" + this.calcularProduccion() + "\t\t\tRechazo";
     }
 
 }

@@ -32,6 +32,6 @@ public  abstract class Rosa {
 		String longitud=String.valueOf(this.longitud);
 		String fecha = this.fechaCosecha.toString();
 		String produccion=String.valueOf(this.produccion);
-		return variedad+","+longitud+","+fecha+","+produccion;
+		return variedad+"\t\t"+longitud+"\t\t\t"+fecha+"\t"+produccion;
 	}
 }
